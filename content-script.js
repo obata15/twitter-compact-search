@@ -70,7 +70,7 @@ const mutationObserver = new MutationObserver((mutationRecords) => {
       });
     }
 
-    const articles = mutationRecord.target.querySelectorAll('article');
+    const articles = mutationRecord.target.querySelectorAll('[aria-label="Timeline: Search timeline"] article, [aria-label="タイムライン: タイムラインを検索"] article');
     for (let article of articles) {
       compact(article);
     }
