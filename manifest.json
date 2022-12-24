@@ -1,0 +1,14 @@
+{
+  "manifest_version": 3,
+  "name": "Twitter Compact Search",
+  "version": "0.0.1",
+
+  "description": "Compact view for Twitter search",
+
+  "content_scripts": [
+    {
+      "matches" : ["https://twitter.com/*"],
+      "js" : ["content-script.js"]
+    }
+  ]
+}
