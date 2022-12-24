@@ -31,22 +31,6 @@ function compact (article) {
   if (showThread) {
     showThread.remove();
   }
-
-  const cardWrapper = article.querySelector('[data-testid="card.wrapper"]');
-
-  if (cardWrapper) {
-    // cardWrapper.style = "flex-direction: row; height: 5em;";
-
-    // const smallCardMedia = cardWrapper.querySelector('[data-testid="card.layoutSmall.media"]');
-    // if (smallCardMedia) {
-    //   smallCardMedia.remove();
-    // }
-
-    // const largeCardMedia = cardWrapper.querySelector('[data-testid="card.layoutLarge.media"]');
-    // if (largeCardMedia) {
-    //   largeCardMedia.remove();
-    // }
-  }
 }
 
 const mutationObserver = new MutationObserver((mutationRecords) => {
