@@ -4,7 +4,7 @@ function compact (article) {
     tweetText.style = "white-space: normal;";
   }
 
-  const textPhotoMenu = tweetText.parentElement.parentElement;
+  const textPhotoMenu = tweetText?.parentElement?.parentElement;
   if (textPhotoMenu) {
     textPhotoMenu.style = "display: block";
 
