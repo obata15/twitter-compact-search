@@ -48,7 +48,7 @@ const mutationObserver = new MutationObserver((mutationRecords) => {
         h2.remove();
       });
   
-      const showAlls = timeline.querySelectorAll('[href$="typed_query&f=user"]');
+      const showAlls = timeline.querySelectorAll('[href$="&f=user"]');
       showAlls.forEach((showAll) => {
         showAll.remove();
       });
