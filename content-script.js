@@ -33,9 +33,14 @@ function compact (article) {
   }
 }
 
+const timelineLabels = [
+  '[aria-label="Timeline: Search timeline"]',
+  '[aria-label="タイムライン: タイムラインを検索"]'
+];
+
 const mutationObserver = new MutationObserver((mutationRecords) => {
   mutationRecords.forEach((mutationRecord) => {
-    const timeline = mutationRecord.target.querySelector('[aria-label="Timeline: Search timeline"], [aria-label="タイムライン: タイムラインを検索"]');
+    const timeline = mutationRecord.target.querySelector(timelineLabels);
 
     if (timeline) {
       const userCells = timeline.querySelectorAll('[data-testid="UserCell"]');
@@ -54,7 +59,7 @@ const mutationObserver = new MutationObserver((mutationRecords) => {
       });
     }
 
-    const articles = mutationRecord.target.querySelectorAll('[aria-label="Timeline: Search timeline"] article, [aria-label="タイムライン: タイムラインを検索"] article');
+    const articles = mutationRecord.target.querySelectorAll(timelineLabels.map((timelineLabel) => timelineLabel + " article"));
     for (let article of articles) {
       compact(article);
     }
