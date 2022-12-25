@@ -24,6 +24,29 @@ function compact (article) {
       if (retweet) {
         retweet.style = "max-height: 100px;"
       }
+
+      const cardSmallMedia = mediaContainer.querySelector('[data-testid="card.layoutSmall.media"]');
+      const cardSmallText = cardSmallMedia?.nextSibling;
+      if (cardSmallText) {
+        cardSmallText.style = "margin-left: -90px; background: rgba(0,0,0,0.5);";
+      }
+      const cardSmallDetail = mediaContainer.querySelector('[data-testid="card.layoutSmall.detail"]');
+      const cardSmallSiteDomain = cardSmallDetail?.firstChild;
+      if (cardSmallSiteDomain) {
+        cardSmallSiteDomain.style = "color: white;";
+      }
+
+      const cardLargeMedia = mediaContainer.querySelector('[data-testid="card.layoutLarge.media"]');
+      const cardLargeText = cardLargeMedia?.nextSibling;
+      if (cardLargeText) {
+        cardLargeText.style = "margin-top: -90px; background: rgba(0,0,0,0.5);";
+      }
+      
+      const cardLargeDetail = mediaContainer.querySelector('[data-testid="card.layoutLarge.detail"]');
+      const cardLargeSiteDomain = cardLargeDetail?.firstChild;
+      if (cardLargeSiteDomain) {
+        cardLargeSiteDomain.style = "color: white;";
+      }
     }
   }
 
