@@ -4,7 +4,7 @@ function compact (article) {
     tweetText.style = "white-space: normal;";
   }
 
-  const textPhotoMenu = tweetText?.parentElement?.parentElement;
+  const textPhotoMenu = tweetText?.parentElement?.parentElement; // FIXME
   if (textPhotoMenu) {
     textPhotoMenu.style = "display: block";
 
@@ -13,44 +13,44 @@ function compact (article) {
     if (mediaContainer) {
       mediaContainer.style = "float: right; margin-top: 0; margin-left: 12px; width: 150px; height: 100px;";
 
-      const mediaInnerContainer = mediaContainer?.firstChild?.firstChild?.firstChild;
+      const mediaInnerContainer = mediaContainer?.firstChild?.firstChild?.firstChild; // FIXME
       if (mediaInnerContainer) {
         mediaInnerContainer.style = "max-height: 100px;";
       }
 
       textPhotoMenu.insertBefore(mediaContainer, textPhotoMenu.firstChild)
   
-      const retweet = mediaContainer.querySelector('[tabindex="0"]');
+      const retweet = mediaContainer.querySelector('[tabindex="0"]'); // FIXME
       if (retweet) {
         retweet.style = "max-height: 100px;"
       }
 
       const cardSmallMedia = mediaContainer.querySelector('[data-testid="card.layoutSmall.media"]');
-      const cardSmallText = cardSmallMedia?.nextSibling;
+      const cardSmallText = cardSmallMedia?.nextSibling; // FIXME
       if (cardSmallText) {
         cardSmallText.style = "margin-left: -90px; background: rgba(0,0,0,0.5);";
       }
       const cardSmallDetail = mediaContainer.querySelector('[data-testid="card.layoutSmall.detail"]');
-      const cardSmallSiteDomain = cardSmallDetail?.firstChild;
+      const cardSmallSiteDomain = cardSmallDetail?.firstChild; // FIXME
       if (cardSmallSiteDomain) {
         cardSmallSiteDomain.style = "color: white;";
       }
 
       const cardLargeMedia = mediaContainer.querySelector('[data-testid="card.layoutLarge.media"]');
-      const cardLargeText = cardLargeMedia?.nextSibling;
+      const cardLargeText = cardLargeMedia?.nextSibling; // FIXME
       if (cardLargeText) {
         cardLargeText.style = "margin-top: -90px; background: rgba(0,0,0,0.5);";
       }
       
       const cardLargeDetail = mediaContainer.querySelector('[data-testid="card.layoutLarge.detail"]');
-      const cardLargeSiteDomain = cardLargeDetail?.firstChild;
+      const cardLargeSiteDomain = cardLargeDetail?.firstChild; // FIXME
       if (cardLargeSiteDomain) {
         cardLargeSiteDomain.style = "color: white;";
       }
     }
   }
 
-  const showThread = article.children?.[0].children?.[1];
+  const showThread = article.children?.[0].children?.[1]; // FIXME
   if (showThread) {
     showThread.remove();
   }
@@ -71,12 +71,12 @@ const mutationObserver = new MutationObserver((mutationRecords) => {
         userCell.remove();
       });
   
-      const h2s = timeline.querySelectorAll('h2');
+      const h2s = timeline.querySelectorAll('h2'); // FIXME
       h2s.forEach((h2) => {
         h2.remove();
       });
   
-      const showAlls = timeline.querySelectorAll('[href$="&f=user"]');
+      const showAlls = timeline.querySelectorAll('[href$="&f=user"]'); // FIXME
       showAlls.forEach((showAll) => {
         showAll.remove();
       });
